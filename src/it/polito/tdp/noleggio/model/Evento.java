@@ -9,9 +9,23 @@ public class Evento implements Comparable<Evento> {
 		AUTO_RESTITUITA
 	}
 	
+	public LocalTime getTempo() {
+		return tempo;
+	}
+
+	public TipoEvento getTipo() {
+		return tipo;
+	}
+
 	private LocalTime tempo ;
 	private TipoEvento tipo ;
 	
+	public Evento(LocalTime tempo, TipoEvento tipo) {
+		super();
+		this.tempo = tempo;
+		this.tipo = tipo;
+	}
+
 	@Override
 	public int compareTo(Evento other) {
 		return this.tempo.compareTo(other.tempo);
