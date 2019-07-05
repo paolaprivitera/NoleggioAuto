@@ -4,7 +4,8 @@ import java.time.LocalTime;
 
 public class Evento implements Comparable<Evento> {
 	
-	public enum TipoEvento {
+	public enum TipoEvento { // insieme di costanti che rappresentano
+							 // i vari tipi di eventi che possono verificarsi
 		CLIENTE_ARRIVA,
 		AUTO_RESTITUITA
 	}
@@ -19,7 +20,8 @@ public class Evento implements Comparable<Evento> {
 	}
 
 	@Override
-	public int compareTo(Evento other) {
+	public int compareTo(Evento other) { // Perche' devono essere ordinati in base al tempo
+		// Priorita' della coda
 		return this.tempo.compareTo(other.tempo);
 	}
 
